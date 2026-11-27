@@ -33,15 +33,11 @@ def prepare_data(
     return x_train, x_test, y_train, y_test
 
 
-def train_model(
-    x_train, y_train, n_estimators: int = 100, random_state: int = 42
-):
+def train_model(x_train, y_train, n_estimators: int = 100, random_state: int = 42):
     """
     Crée et entraîne un classifieur Random Forest sur les données d'entraînement.
     """
-    rf = RandomForestClassifier(
-        n_estimators=n_estimators, random_state=random_state
-    )
+    rf = RandomForestClassifier(n_estimators=n_estimators, random_state=random_state)
     rf.fit(x_train, y_train)
     return rf
 

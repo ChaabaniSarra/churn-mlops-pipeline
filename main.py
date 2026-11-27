@@ -36,9 +36,7 @@ def main():
 
     if args.step == "prepare":
         x_train, x_test, y_train, y_test = prepare_data(args.data)
-        print(
-            f"Données préparées : x_train={x_train.shape}, x_test={x_test.shape}"
-        )
+        print(f"Données préparées : x_train={x_train.shape}, x_test={x_test.shape}")
 
     elif args.step == "train":
         x_train, _, y_train, _ = prepare_data(args.data)
